@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<link rel='stylesheet' href='/assets/stylesheets/main.css'>
+		<link rel='stylesheet' href="/assets/fonts/sans/inter/inter.css">
+		<link href="https://fonts.googleapis.com/css?family=DM+Serif+Text|Lora|Zilla+Slab&display=swap|Tinos&display=swap|family=Fira+Sans&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<link rel='icon' href='/favicon.ico' type='image/x-icon'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	</head>
+	<body>
+
+		<script>
+			$(window).scroll(function() {    
+                var scroll = $(window).scrollTop();
+                if (scroll >= 70) {
+                    $(".navbar").addClass("darkbar");
+                }
+                else {
+                    $(".navbar").removeClass("darkbar");
+                }
+			});
+		</script>
+
+		<div class='navbar'>
+			<a href='/index.html'>
+				<div class='navbaritem' style='width: 80px; font-family: "Fira Sans", sans-serif; font-size: 26px; font-weight:400'>
+					&
+					<!-- <img src='assets/images/logo.png' width=30px style='display: inline-block;vertical-align: middle;'> -->
+				</div>
+			</a>
+			<a href='/index.html'>
+				<div class='navbaritem'>
+					Home
+				</div>
+			</a>
+			<a href='/pages/about'>
+				<div class='navbaritem'>
+					About
+				</div>
+			</a>
+		</div>
+		<div id='bumper'></div>
+		<div id='bannermain'>
+			<h1>et cetera.</h1>
+			<p id='explain'>a podcast of literally zero content</p>
+		</div>
+
+		<div id='about'>
+			<div class='third'></div>
+		</div>
+
+		<div id='episodes'>
+			<div id='ep1' class='episode'>
+				<p class='title'>Ep 1</p>
+			</div>
+			<div id='ep2' class='episode'>
+				<p class='title'>Ep 2</p>
+			</div>
+		</div>
+
+		<script>
+			function sleep(ms) {
+ 				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+			async function test() {
+				var num = document.querySelectorAll('#episodes .episode').length
+				for (i = 1; i <= num; i++) {
+					document.getElementById("ep" + i).className += " rightfade";
+					await sleep(100);
+				}
+			}
+			test();
+		</script>
+
+		<div style='height:1000px'></div>
+		<footer>
+		</footer>
+	</body>
+</html>
