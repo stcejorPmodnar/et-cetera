@@ -40,18 +40,26 @@ body {
 	position: relative;
 }
 
-#navbar {
+.navbar {
 	height: var(--navbar-height);
-	background-color: rgb(0, 0, 0);
-	color: white;
-	box-shadow: 4px 4px 12px rgba(0, 0, 0, .3);
+	background-color: rgba(0, 0, 0, 0);
+	color: rgb(0, 0, 0);
+	box-shadow: 4px 4px 0px rgba(0, 0, 0, 0);
 	position: fixed;
 	width: 100%;
 	z-index: 100;
+	transition: .2s;
+}
+
+.darkbar {
+	color: white;
+	background-color: black;
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, .3);
 }
 
 #bumper {
 	height: var(--navbar-height);
+	background-color: var(--secondary-color);
 }
 
 .navbaritem {
@@ -62,11 +70,13 @@ body {
 	height: var(--navbar-height);
 	line-height: var(--navbar-height);
 	text-align: center;
-	transition: .2s ease;
+	/* transition: .2s ease; */
 }
 
 .navbaritem:hover {
 	color: grey;
+	transition: .2s ease;
+
 }
 
 #bannermain {
@@ -82,7 +92,8 @@ body {
 h1 {
 	font-weight: 400;
 	font-size: 100px;
-	font-family: 'Tinos', serif;
+	/* font-family: 'Tinos', serif; */
+	font-family: 'DM Serif Text', serif;
 
 }
 
@@ -131,3 +142,4 @@ h1 {
 		opacity: 1;
 	}
 }
+
