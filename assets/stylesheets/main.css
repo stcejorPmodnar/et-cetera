@@ -5,6 +5,7 @@
 
 :root {
 	--main-color: black;
+	--navbar-height: 70px;
 }
 
 
@@ -35,4 +36,68 @@
 body {
 	font-family: "Soleil";
 	font-weight: 300;
+}
+
+#navbar {
+	height: var(--navbar-height);
+	background-color: black;
+	color: white;
+}
+
+.navbaritem {
+	display: inline-block;
+	cursor: pointer;
+	width: 150px;
+	font-size: 20px;
+	height: var(--navbar-height);
+	line-height: var(--navbar-height);
+	text-align: center;
+	transition: .2s ease;
+}
+
+.navbaritem:hover {
+	color: grey;
+}
+
+#bannermain {
+	margin: 60px auto;
+	margin-top: 0px; 
+	text-align: center;
+	width: 100%;
+	background-color: lightgrey;
+	padding-top: 60px;
+	height: 300px;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 100px;
+	font-family: 'Tinos', serif;
+
+}
+
+#explain {
+	font-size: 25px;
+}
+
+#episodes {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: -160px;
+}
+
+.episode {
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	display: inline-block;
+	margin-right: 6%;
+}
+
+.title {
+	color: white;
+	font-size: 30px;
+	margin-top: calc(calc(200px / 2) - 23px );
 }
