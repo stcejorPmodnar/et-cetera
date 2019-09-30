@@ -4,9 +4,17 @@
 }
 
 :root {
-	--main-color: black;
-	--secondary-color: rgb(177, 219, 247);
 	--navbar-height: 80px;
+
+	/* --main-color: rgb(0, 38, 95);
+	--secondary-color: rgb(177, 219, 247);
+	--tertiary-color: rgb(0, 11, 58); */
+
+	--color2: rgb(110, 101, 70);
+	--color3: rgba(237, 216, 146, 1);
+	--color1: rgb(238, 189, 99);
+	--color4: rgba(181, 184, 163, 1);
+	--color5: rgba(170, 186, 158, 1);
 }
 
 
@@ -40,11 +48,15 @@ body {
 	position: relative;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 .navbar {
 	height: var(--navbar-height);
 	background-color: rgba(0, 0, 0, 0);
 	color: rgb(0, 0, 0);
-	box-shadow: 4px 4px 0px rgba(0, 0, 0, 0);
 	position: fixed;
 	width: 100%;
 	z-index: 100;
@@ -59,7 +71,7 @@ body {
 
 #bumper {
 	height: var(--navbar-height);
-	background-color: var(--secondary-color);
+	background-color: var(--color3);
 }
 
 .navbaritem {
@@ -84,8 +96,9 @@ body {
 	margin-top: 0px; 
 	text-align: center;
 	width: 100%;
-	background-color: var(--secondary-color);
-	padding-top: 60px;
+	background-color: var(--color3);
+	padding-top: 20px;
+	padding-bottom: 20px;
 	height: 300px;
 }
 
@@ -112,11 +125,12 @@ h1 {
 .episode {
 	width: 200px;
 	height: 200px;
-	background-color: rgb(0, 11, 58);
+	background-color: var(--color1);
 	display: inline-block;
 	margin-right: 6%;
-	box-shadow: 4px 4px 12px rgba(0, 0, 0, .3);
+	/* box-shadow: 4px 4px 12px rgba(0, 0, 0, .3); */
 	opacity: 0;
+	border: 10px white solid;
 }
 
 .title {
