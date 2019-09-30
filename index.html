@@ -3,13 +3,14 @@
 	<head>
 		<title>Home</title>
 		<link rel='stylesheet' href='assets/stylesheets/main.css'>
-		<link rel='stylesheet' href="assets/fonts/sans/">
+		<link rel='stylesheet' href="assets/fonts/sans/inter/inter.css">
 		<link href="https://fonts.googleapis.com/css?family=Tinos&display=swap" rel="stylesheet">
 
 		<link rel='icon' href='favicon.ico' type='image/x-icon'>
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	</head>
 	<body>
+
 		<div id='navbar'>
 			<div class='navbaritem' style='width: 80px'>
 				&
@@ -21,6 +22,7 @@
 				About
 			</div>
 		</div>
+		<div id='bumper'></div>
 		<div id='bannermain'>
 			<h1>et cetera.</h1>
 			<p id='explain'>a podcast of literally zero content</p>
@@ -31,13 +33,30 @@
 		</div>
 
 		<div id='episodes'>
-			<div class='episode'>
+			<div id='ep1' class='episode'>
 				<p class='title'>Ep 1</p>
 			</div>
-			<div class='episode'>
+			<div id='ep2' class='episode'>
 				<p class='title'>Ep 2</p>
 			</div>
 		</div>
+
+		<script>
+			function sleep(ms) {
+ 				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+			async function test() {
+				var num = document.querySelectorAll('#episodes .episode').length
+				for (i = 1; i <= num; i++) {
+					document.getElementById("ep" + i).className += " rightfade";
+					await sleep(100);
+				}
+			}
+			test();
+		</script>
+
+		<div style='height:1000px'></div>
 		<footer>
 		</footer>
 	</body>
