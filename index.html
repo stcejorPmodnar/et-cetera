@@ -19,78 +19,88 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	</head>
 	<body>
+		<div id='wrapper'>
 
-		<script>
-			$(window).scroll(function() {    
-                var scroll = $(window).scrollTop();
-                if (scroll >= 70) {
-                    $(".navbar").addClass("darkbar");
-                }
-                else {
-                    $(".navbar").removeClass("darkbar");
-                }
-			});
-		</script>
+			<script>
+				$(window).scroll(function() {    
+					var scroll = $(window).scrollTop();
+					if (scroll >= 70) {
+						$(".navbar").addClass("darkbar");
+					}
+					else {
+						$(".navbar").removeClass("darkbar");
+					}
+				});
+			</script>
 
-		<div class='navbar'>
-			<a href='/etcetera/index.html'>
-				<div class='navbaritem' style='width: 80px; font-family: "Fira Sans", sans-serif; font-size: 26px; font-weight:400'>
-					&
-					<!-- <img src='assets/images/logo.png' width=30px style='display: inline-block;vertical-align: middle;'> -->
-				</div>
-			</a>
-			<a href='/etcetera/index.html'>
-				<div class='navbaritem'>
-					Home
-				</div>
-			</a>
-			<a href='/etcetera/pages/about'>
-				<div class='navbaritem'>
-					About
-				</div>
-			</a>
-		</div>
-		<div id='bumper'></div>
-		<div id='bannermain'>
-			<h1>et cetera.</h1>
-			<p id='explain'>a podcast of literally zero content</p>
-		</div>
-		<div id='episodes'>
-			<div id='ep1' class='episode'>
-				<p class='title'>Ep 1</p>
+			<div class='navbar'>
+				<a href='/etcetera/index.html'>
+					<div class='navbaritem' style='width: 80px; font-family: "Fira Sans", sans-serif; font-size: 26px; font-weight:400'>
+						&
+						<!-- <img src='assets/images/logo.png' width=30px style='display: inline-block;vertical-align: middle;'> -->
+					</div>
+				</a>
+				<a href='/etcetera/index.html'>
+					<div class='navbaritem'>
+						Home
+					</div>
+				</a>
+				<a href='/etcetera/pages/about'>
+					<div class='navbaritem'>
+						About
+					</div>
+				</a>
 			</div>
-			<div id='ep2' class='episode'>
-				<p class='title'>Ep 2</p>
+			<div id='bumper'></div>
+			<div id='bannermain'>
+				<h1>et cetera.</h1>
+				<p id='explain'>a podcast of literally zero content</p>
 			</div>
-		</div>
+			<div id='episodes'>
+				<div id='ep1' class='episode'>
+					<p class='title'>Ep 1</p>
+				</div>
+				<div id='ep2' class='episode'>
+					<p class='title'>Ep 2</p>
+				</div>
+			</div>
 
-		<script>
-			function sleep(ms) {
- 				return new Promise(resolve => setTimeout(resolve, ms));
-			}
-
-			async function test() {
-				var num = document.querySelectorAll('#episodes .episode').length
-				for (i = 1; i <= num; i++) {
-					document.getElementById("ep" + i).className += " rightfade";
-					await sleep(100);
+			<script>
+				function sleep(ms) {
+					return new Promise(resolve => setTimeout(resolve, ms));
 				}
-			}
-			test();
-		</script>
-		<div id='about'>
-			<a href='index.html#aboutanchor'>
-				<img src='assets/images/arrow.png' width=100px>
+
+				async function test() {
+					var num = document.querySelectorAll('#episodes .episode').length
+					for (i = 1; i <= num; i++) {
+						document.getElementById("ep" + i).className += " rightfade";
+						await sleep(100);
+					}
+				}
+				test();
+			</script>
+			<div id='about'>
+				<a id='aboutanchor'></a>
+				<a href='index.html#aboutanchor'>
+					<img src='assets/images/arrow.png' width=100px>
+				</a>
 				<div id='hidden' style='height: 100px'></div>
-			</a>
-			<a id='aboutanchor'></a>
-			<h3>about</h3>
-			<p>etcetera is a <span class='orange'>podcast</span> where three friends, Shrek, localhost, and Slicer talk about <span class='orange'>whatever they feel like</span>. Currently we have filler text occupying this space, so no need to actually read what is going on within these lines.</p>
-		</div>
-		<div id='contact'>
-			<h3>contact</h3>
+				<h3>about</h3>
+				<p>etcetera is a <span class='orange'>podcast</span> where three friends, Shrek, localhost, and Slicer talk about <span class='orange'>whatever they feel like</span>. Currently we have filler text occupying this space, so no need to actually read what is going on within these lines.</p>
+			</div>
+			<div id='contact'>
+				<h3>contact</h3>
+				<form>
+					<input type='text' placeholder='name' class='input' id='name'>
+					<input type='email' placeholder='email@example.com' id='email' class='input' >
+					<br>
+					<textarea class='input textarea' placeholder='your message here.'></textarea>
+				</form>
+			</div>
+			<div id=''></div>
 		</div>
 		<footer>
+			<p>This is a footer.</p>
 		</footer>
 	</body>
 </html>

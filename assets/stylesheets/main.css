@@ -7,7 +7,7 @@
 	--navbar-height: 80px;
 
 	--color1: rgb(236, 175, 61);
-	--color2: rgb(207, 184, 107);
+	--color2: rgb(221, 198, 124);
 	--color3: rgb(253, 226, 137);
 	--color4: rgb(255, 190, 49);
 }
@@ -191,7 +191,7 @@ h3 {
 	height: 500px;
 	background-color: black;
 	text-align: center;
-	padding-top: 230px;
+	padding-top: 260px;
 	/* transform: translate(0,-280px); */
 	z-index: 1;
 	clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
@@ -224,7 +224,7 @@ h3 {
 
 #contact {
 	text-align: center;
-	height: 800px;
+	height: 400px;
 	background-color: var(--color3);
 }
 
@@ -244,8 +244,8 @@ h3 {
 	font-size: 20px;
 	transition: .2s;
 	vertical-align: middle;
-	margin: 20px;
-	background-color: rgb(255, 250, 233);
+	margin-bottom: 20px;
+	background-color: rgb(255, 253, 245);
 }
 
 .input:focus {
@@ -253,5 +253,29 @@ h3 {
 }
 
 .textarea {
-	height: 120px;
+	width: 460px;
+	height: 110px;
 }
+
+#name {
+	width: 150px;
+	margin-right: 20px;
+}
+
+#wrapper {
+	min-height: calc(100vh - 90px);
+	padding-bottom: 90px;
+}
+
+footer {
+	height: 70px;
+	background-color: black;
+	color: white;
+	text-align: left;
+	font-size: 20px;
+	padding: 10px;
+	line-height: 70px;
+}
+  
+  
+  
