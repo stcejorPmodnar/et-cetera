@@ -7,7 +7,7 @@
 	--navbar-height: 80px;
 
 	--color1: rgb(236, 175, 61);
-	--color2: rgb(110, 101, 70);
+	--color2: rgb(207, 184, 107);
 	--color3: rgb(253, 226, 137);
 	--color4: rgb(255, 190, 49);
 }
@@ -45,6 +45,7 @@ body {
 	font-family: "Soleil";
 	font-weight: 300;
 	position: relative;
+	background-color: var(--color3);
 }
 
 a {
@@ -130,6 +131,11 @@ h3 {
 	top: 360px;
 	z-index: 2;
 	width: 100%;
+	white-space: nowrap;
+	overflow-y: auto;
+	overflow-x: visible;
+	height: 320px;
+	padding-top: 5px;
 }
 
 .episode {
@@ -187,16 +193,29 @@ h3 {
 	text-align: center;
 	padding-top: 230px;
 	/* transform: translate(0,-280px); */
-    z-index: 1;
+	z-index: 1;
+	clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
 }
 
 #about > p {
 	color: white;
 	font-size: 20px;
 	margin-top: 30px;
-	width: 50%;
+	width: 60%;
 	margin: 40px auto;
 	line-height: 25px;
+}
+
+@media screen and (max-width: 600px) {
+	#about > p {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	#about > p {
+		font-size: 16px;
+	}
 }
 
 .orange {
@@ -204,10 +223,35 @@ h3 {
 }
 
 #contact {
-	height: 300px;
-	background-color: grey;
+	text-align: center;
+	height: 800px;
+	background-color: var(--color3);
 }
 
 #contact > h3 {
+	padding-top:80px;
 	color: black;
+	padding-bottom: 40px;
+}
+
+.input {
+	width: 270px;
+	border: 5px var(--color2) solid;
+	box-shadow: 3px 3px 0px rgba(0,0,0,.4);
+	height: 25px;
+	padding: 5px;
+	outline: none;
+	font-size: 20px;
+	transition: .2s;
+	vertical-align: middle;
+	margin: 20px;
+	background-color: rgb(255, 250, 233);
+}
+
+.input:focus {
+	box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.textarea {
+	height: 120px;
 }
